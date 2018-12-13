@@ -1,0 +1,11 @@
+@import '../Util/_util.scss';
+@import '../../src/Util/Fonts/stylesheet.css';
+
+body {
+    background-color: $dark;
+}
+
+.app {
+    background-color: pink;
+    width: 100%;
+}
