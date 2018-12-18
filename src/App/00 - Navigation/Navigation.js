@@ -10,18 +10,20 @@ export default class Navigation extends Component {
     render() {
         return (
             <div className="nav">
-                <div className="nav-logo-wrapper">
+                <div className="nav-logo">
                     <SVGComponent width="50" height="50" />
-                    <div className="logo-line" />
-                    <div className="logo-name-wrapper">
-                        <div className="logo-firstname">Nathan</div>
-                        <div className="logo-lastname">Schneider</div>
+                    <div className="nav-logo-line" />
+                    <div className="nav-logo-name">
+                        <div className="nav-logo-firstname">Nathan</div>
+                        <div className="nav-logo-lastname">Schneider</div>
                     </div>
                 </div>
-                <div className="menu-btn-wrapper" onClick={this.handleClick}>
-                    <div className="menu-btn-bar" />
-                    <div className="menu-btn-bar" />
-                    <div className="menu-btn-bar" />
+                <div className="nav-menu-links">
+                    <div className="nav-menu-btn" onClick={this.handleClick}>
+                        <div className="nav-menu-btn-bar" />
+                        <div className="nav-menu-btn-bar" />
+                        <div className="nav-menu-btn-bar" />
+                    </div>
                 </div>
             </div>
         );

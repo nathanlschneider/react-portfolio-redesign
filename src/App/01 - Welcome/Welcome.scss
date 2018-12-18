@@ -1,34 +1,68 @@
 @import '../../Util/_util.scss';
-.welcome-wrapper {
-    display: flex;
-    flex-direction: column;
-}
 
-.welcome-wall {
-    background-image: url('../Shared/Images/background.jpeg');
-    background-size: cover;
-    opacity: 0.2;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.welcome-content-wrapper {
-    top: 45vh;
-    margin-left: 10%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-
-    .welcome-name {
-        color: $medium;
-        font-weight: 300;
-        font-size: 64px;
+.welcome {
+    .welcome-wall {
+        background-image: url('../Shared/Images/background.jpeg');
+        background-size: cover;
+        height: 100vh;
+        left: 0;
+        opacity: 0.2;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
     }
-    .welcome-title {
-        color: $light;
-        font-weight: 800;
-        font-size: 96px;
-        margin-bottom: 75px;
+    .welcome-content {
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.2fr 0.5fr 0.6fr 0.6fr;
+        grid-template-areas: '.' '.' '.' '.';
+        height: 100vh;
+
+        .welcome-name {
+            color: $medium;
+            font-weight: 300;
+            font-size: 64px;
+        }
+        .welcome-title {
+            font-weight: 800;
+            color: $light;
+            font-size: 96px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .welcome {
+        .welcome-wall {
+            background-image: url('../Shared/Images/background.jpeg');
+            background-size: cover;
+            height: 100vh;
+            left: 0;
+            opacity: 0.2;
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+        }
+        .welcome-content {
+            margin-left: 25px;
+            align-items: center;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1.2fr 0.5fr 0.6fr 0.6fr;
+            grid-template-areas: '.' '.' '.' '.';
+            height: 100vh;
+
+            .welcome-name {
+                color: $medium;
+                font-weight: 300;
+                font-size: 32px;
+            }
+            .welcome-title {
+                font-weight: 800;
+                color: $light;
+                font-size: 40px;
+            }
+        }
     }
 }

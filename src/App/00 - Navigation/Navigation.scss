@@ -3,49 +3,64 @@
 .nav {
     align-items: center;
     color: $light;
-    display: flex;
-    justify-content: space-between;
-
-    height: 100px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px;
     position: fixed;
-    width: 100%;
-}
-.nav-logo-wrapper {
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    margin-left: 10%;
-}
-.logo-line {
-    margin: 0px 14px 0px 10px;
-    width: 3px;
-    height: 50px;
-    background-color: $light-blue;
+    width: 1200px;
+
+    .nav-logo {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        flex-wrap: nowrap;
+        min-width: 388px;
+
+        .nav-logo-line {
+            background-color: $light-blue;
+            height: 50px;
+            margin: 0px 14px 0px 10px;
+            width: 3px;
+        }
+
+        .nav-logo-name {
+            font-size: 20px;
+            letter-spacing: 0.1em;
+        }
+    }
+
+    .nav-menu-links {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-end;
+
+        .nav-menu-btn {
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            height: 20px;
+            justify-content: space-between;
+
+            .nav-menu-btn-bar {
+                background-color: $light;
+                border-radius: 1px;
+                height: 2px;
+                width: 32px;
+            }
+        }
+    }
 }
 
-.logo-name-wrapper {
-    font-size: 20px;
-    letter-spacing: 0.1em;
-}
-
-.logo-first-name {
-}
-.logo-last-name {
-}
-
-.menu-btn-wrapper {
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    height: 20px;
-    justify-content: space-between;
-    margin-right: 10%;
-}
-.menu-btn-bar {
-    background-color: $light;
-    border-radius: 1px;
-    height: 2px;
-    width: 32px;
+@media screen and (max-width: 1250px) {
+    .nav {
+        width: 100%;
+        .nav-logo {
+            margin-left: 10px;
+        }
+        .nav-menu-links {
+            margin-right: 25px;
+        }
+    }
 }
