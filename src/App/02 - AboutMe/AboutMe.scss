@@ -2,11 +2,60 @@
 
 .about {
     height: 100vh;
-    .about-wall {
-        position: absolute;
-        height: 100vh;
-        width: 100%;
-        left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    .about__wall {
         background-color: $dark;
+        height: 100vh;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .grid-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-gap: 100px 75px;
+    }
+
+    .about__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $medium;
+        border-radius: 5px;
+        grid-row: 1/4;
+    }
+
+    .about__container {
+        .about__title {
+            font-size: 96px;
+            font-weight: 800;
+        }
+
+        .about__line {
+            background-color: $light-blue;
+            height: 3px;
+            width: 420px;
+            margin-bottom: 20px;
+        }
+        .about__text {
+            font-size: 36px;
+            font-weight: 200;
+        }
+        color: $light;
+        grid-row: 1/4;
+    }
+
+    .about__buttons {
+        display: flex;
+        justify-content: space-between;
+        grid-column: 1/3;
     }
 }
